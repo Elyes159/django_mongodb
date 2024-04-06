@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Radio Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Propriété & Location	</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Code Site</th>
+                    <th>Nom Site</th>
+                    <th>Direction Régionale</th>
+                    <th>Nom du Propriétaire</th>
+                    <th>Type de contrat</th>
+                    <th>Date de signature</th>
+                    <th>Date début contrat</th>
+                    <th>Date fin contrat</th>
+                    <th>Durée du contrat</th>
+                    <th>Mode de renouvellement du contrat</th>
+                    <th>Durée de renouvellement</th>
+                    <th>Superficie louée (m²)</th>
+                    <th>Présence de clause contractuelle autorisant le partage</th>
+                    <th>Loyer annuel</th>
+                    <th>% Contractuel d'augmentation du loyer</th>
+                    <th>Périodicité d'augmentation du loyer</th>
+                    <th>Loyer actuel</th>
+                    <th>Dernière date de révision du loyer</th>
+                    <th>Modalité de paiement du loyer</th>
+                    <th>Frais de consommation d'énergie inclus dans le loyer</th>
+                    <th>Situation contractuelle</th>
+                </tr>
+            </thead>
+           <td>
+    <button onclick="handleModifyButtonClick()">Modifier</button>
+    <button onclick="handleDeleteButtonClick()">Supprimer</button>
+</td>
+</tr>
+</tbody>
+</table>
+<button id="addButton" onclick="handleAddButtonClick()">Ajouter</button>
+</main>
+<footer>© 2024 TUNISIE TELECOM </footer>
+<script>
+    // Function to handle the "Ajouter" button click
+    function handleAddButtonClick() {
+        // Redirect to the page where you can add new data
+        window.location.href = "/add_jui";
+    }
+    
+    // Function to handle the "Modifier" button click
+    function handleModifyButtonClick() {
+        // Redirect to the page where you can modify data
+        // Replace "codeSite" with the actual ID of the site to be modified
+        var codeSite = "codeSite"; // Replace this with the actual ID of the site
+        window.location.href = "/modify_jui/" + codeSite;
+    }
+    
+    // Function to handle the "Supprimer" button click
+    function handleDeleteButtonClick() {
+        // Send an AJAX request or redirect to the backend to delete the data
+        if (confirm("Êtes-vous sûr de vouloir supprimer ce site?")) {
+            // Here you can make an AJAX request or redirect to the backend URL to delete the data
+            window.location.href = "/delete_jui";
+        }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modifier Site</title>
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .btn-modifier {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+    }
+    .btn-retour {
+        background-color: #ccc;
+        color: #000;
+        border: none;
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Modifier l’état juridique des sites radio</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+
+                <label for="codeSite">Code Site:</label>
+                <input type="text" id="codeSite" name="codeSite" required>
+                <br>
+                <label for="nomSite">Nom Site:</label>
+                <input type="text" id="nomSite" name="nomSite" required>
+                <br>
+                <label for="directionRegionale">Direction Régionale:</label>
+                <input type="text" id="directionRegionale" name="directionRegionale" required>
+                <br>
+                <label for="nomProprietaire">Nom du Propriétaire:</label>
+                <input type="text" id="nomProprietaire" name="nomProprietaire" required>
+                <br>
+                <label for="typeContrat">Type de contrat:</label>
+                <select id="typeContrat" name="typeContrat" required>
+                    <option value="Contrat privé">Contrat privé</option>
+                    <option value="Convention de partage">Convention de partage</option>
+                    <option value="Contrat B2B">Contrat B2B</option>
+                    <option value="Sans contrat">Sans contrat</option>
+                    <option value="autres">Autres</option>
+                </select>
+                <br>
+                <label for="dateSignature">Date de signature:</label>
+                <input type="date" id="dateSignature" name="dateSignature" required>
+                <br>
+                <label for="dateDebutContrat">Date début contrat:</label>
+                <input type="date" id="dateDebutContrat" name="dateDebutContrat" required>
+                <br>
+                <label for="dateFinContrat">Date fin contrat:</label>
+                <input type="date" id="dateFinContrat" name="dateFinContrat" required>
+                <br>
+                <label for="dureeContrat">Durée du contrat:</label>
+                <input type="text" id="dureeContrat" name="dureeContrat" required>
+                <br>
+                <label for="modeRenouvellementContrat">Mode de renouvellement du contrat:</label>
+                <select id="modeRenouvellementContrat" name="modeRenouvellementContrat" required>
+                    <option value="Non renouvelable">Non renouvelable</option>
+                    <option value="Renouvelable par tacite reconduction">Renouvelable par tacite reconduction</option>
+                    <option value="autres">Autres</option>
+                </select>
+                <br>
+                <label for="dureeRenouvellement">Durée de renouvellement:</label>
+                <input type="text" id="dureeRenouvellement" name="dureeRenouvellement" required>
+                <br>
+                <label for="superficieLouee">Superficie louée (m²):</label>
+                <input type="number" id="superficieLouee" name="superficieLouee" required>
+                <br>
+                <label for="presenceClauseContractuelle">Présence de clause contractuelle autorisant le partage in:</label>
+                <select id="presenceClauseContractuelle" name="presenceClauseContractuelle" required>
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+                <br>
+                <label for="loyerAnnuel">Loyer annuel:</label>
+                <input type="number" id="loyerAnnuel" name="loyerAnnuel" required>
+                <br>
+                <label for="pourcentageAugmentation">Pourcentage contractuel d'augmentation du loyer:</label>
+                <input type="number" id="pourcentageAugmentation" name="pourcentageAugmentation" required>
+                <br>
+                <label for="periodiciteAugmentation">Périodicité d'augmentation du loyer:</label>
+                <select id="periodiciteAugmentation" name="periodiciteAugmentation" required>
+                    <option value="Annuelle">Annuelle</option>
+                    <option value="Quinquennale">Quinquennale</option>
+                    <option value="autres">Autres</option>
+                </select>
+                <br>
+                <label for="loyerActuel">Loyer actuel:</label>
+                <input type="number" id="loyerActuel" name="loyerActuel" required>
+                <br>
+                <label for="dateDerniereRevision">Dernière date de révision du loyer:</label>
+                <input type="date" id="dateDerniereRevision" name="dateDerniereRevision" required>
+                <br>
+                <label for="modalitePaiement">Modalité de paiement du loyer:</label>
+                <select id="modalitePaiement" name="modalitePaiement" required>
+                    <option value="Annuelle">Annuelle</option>
+                    <option value="Quinquennale">Quinquennale</option>
+                    <option value="autres">Autres</option>
+                </select>
+                <br>
+                <label for="fraisEnergieInclus">Frais de consommation d'énergie inclus dans le loyer:</label>
+                <select id="fraisEnergieInclus" name="fraisEnergieInclus" required>
+                    <option value="Oui">Oui</option>
+                    <option value="Non">Non</option>
+                </select>
+                <br>
+                <label for="situationContractuelle">Situation contractuelle:</label>
+                <input type="text" id="situationContractuelle" name="situationContractuelle" required>
+                <br>
+                <label for="commentaires">Commentaires:</label>
+                <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea>
+                <br>
+            <div class="form-group">
+                <button type="button" class="btn btn-modifier" onclick="handleModifyButtonClick()">Modifier</button>
+                <button type="button" class="btn btn-retour" onclick="handleReturnButtonClick()">Retour</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function handleModifyButtonClick() {
+            // Récupérer la valeur du code du site
+            var codeSite = document.getElementById().value;
+            
+            // Rediriger l'utilisateur vers la page de modification avec le code du site
+            window.location.href = "/modify_site/" ;
+        }
+
+        function handleReturnButtonClick() {
+            // Rediriger l'utilisateur vers la page précédente
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

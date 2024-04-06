@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Radio Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    top: 0;
+
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Informations Générales	</h1>
+    </header>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Code Site</th>
+                    <th>Nom du site</th>
+                    <th>Direction Régionale</th>
+                    <th>Longitude</th>
+                    <th>Latitude</th>
+                    <th>Type de couverture</th>
+                    <th>Type d’installation Site</th>
+                    <th>Type d'installation BTS</th>
+                    <th>Technologies</th>
+                    <th>Backhauling</th>
+                    <th>Site à Vue</th>
+                    <th>Central de rattachement</th>
+                    <th>Type d'environnement</th>
+                    <th>Type du bâtiment</th>
+                    <th>Hauteur</th>
+                    <th>Ville</th>
+                    <th>Code postal</th>
+                    <th>Date de mise en service</th>
+                    <th>Autorisation ANF octroyée</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+           <td>
+    <button onclick="handleModifyButtonClick('123')">Modifier</button>
+    <button onclick="handleDeleteButtonClick('123')">Supprimer</button>
+</td>
+</tr>
+</tbody>
+</table>
+<button id="addButton" onclick="handleAddButtonClick()">Ajouter</button>
+</main>
+<footer>© 2024 TUNISIE TELECOM </footer>
+<script>
+// Function to handle the "Ajouter" button click
+function handleAddButtonClick() {
+// Redirect to the page where you can add new data
+window.location.href = "/add_site";
+}
+
+// Function to handle the "Modifier" button click
+function handleModifyButtonClick(codeSite) {
+// Redirect to the page where you can modify data
+window.location.href = "/modify_site" + codeSite;
+}
+
+// Function to handle the "Supprimer" button click
+function handleDeleteButtonClick(codeSite) {
+    // Afficher une boîte de dialogue de confirmation
+    if (confirm("Êtes-vous sûr de vouloir supprimer ce site?")) {
+        // Si l'utilisateur clique sur "OK" dans la boîte de dialogue
+        // Rediriger vers l'URL de suppression avec le code du site
+        window.location.href = "/delete_site?code=" + codeSite;
+    } else {
+        // Si l'utilisateur clique sur "Annuler" dans la boîte de dialogue
+        // Ne rien faire
+        return false;
+    }
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des sites radio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: inline-block;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: calc(100% - 200px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #4556a0;
+}
+
+</style>
+</head>
+<body>
+    <h1>Ajouter l’état juridique des sites radio</h1>
+    <form id="formulaire">
+        <label for="codeSite">Code Site:</label>
+        <input type="text" id="codeSite" name="codeSite" required>
+        <br>
+        <label for="nomSite">Nom Site:</label>
+        <input type="text" id="nomSite" name="nomSite" required>
+        <br>
+        <label for="directionRegionale">Direction Régionale:</label>
+        <input type="text" id="directionRegionale" name="directionRegionale" required>
+        <br>
+        <label for="nomProprietaire">Nom du Propriétaire:</label>
+        <input type="text" id="nomProprietaire" name="nomProprietaire" required>
+        <br>
+        <label for="typeContrat">Type de contrat:</label>
+        <select id="typeContrat" name="typeContrat" required>
+            <option value="Contrat privé">Contrat privé</option>
+            <option value="Convention de partage">Convention de partage</option>
+            <option value="Contrat B2B">Contrat B2B</option>
+            <option value="Sans contrat">Sans contrat</option>
+            <option value="autres">Autres</option>
+        </select>
+        <br>
+        <label for="dateSignature">Date de signature:</label>
+        <input type="date" id="dateSignature" name="dateSignature" required>
+        <br>
+        <label for="dateDebutContrat">Date début contrat:</label>
+        <input type="date" id="dateDebutContrat" name="dateDebutContrat" required>
+        <br>
+        <label for="dateFinContrat">Date fin contrat:</label>
+        <input type="date" id="dateFinContrat" name="dateFinContrat" required>
+        <br>
+        <label for="dureeContrat">Durée du contrat:</label>
+        <input type="text" id="dureeContrat" name="dureeContrat" required>
+        <br>
+        <label for="modeRenouvellementContrat">Mode de renouvellement du contrat:</label>
+        <select id="modeRenouvellementContrat" name="modeRenouvellementContrat" required>
+            <option value="Non renouvelable">Non renouvelable</option>
+            <option value="Renouvelable par tacite reconduction">Renouvelable par tacite reconduction</option>
+            <option value="autres">Autres</option>
+        </select>
+        <br>
+        <label for="dureeRenouvellement">Durée de renouvellement:</label>
+        <input type="text" id="dureeRenouvellement" name="dureeRenouvellement" required>
+        <br>
+        <label for="superficieLouee">Superficie louée (m²):</label>
+        <input type="number" id="superficieLouee" name="superficieLouee" required>
+        <br>
+        <label for="presenceClauseContractuelle">Présence de clause contractuelle autorisant le partage in:</label>
+        <select id="presenceClauseContractuelle" name="presenceClauseContractuelle" required>
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
+        </select>
+        <br>
+        <label for="loyerAnnuel">Loyer annuel:</label>
+        <input type="number" id="loyerAnnuel" name="loyerAnnuel" required>
+        <br>
+        <label for="pourcentageAugmentation">Pourcentage contractuel d'augmentation du loyer:</label>
+        <input type="number" id="pourcentageAugmentation" name="pourcentageAugmentation" required>
+        <br>
+        <label for="periodiciteAugmentation">Périodicité d'augmentation du loyer:</label>
+        <select id="periodiciteAugmentation" name="periodiciteAugmentation" required>
+            <option value="Annuelle">Annuelle</option>
+            <option value="Quinquennale">Quinquennale</option>
+            <option value="autres">Autres</option>
+        </select>
+        <br>
+        <label for="loyerActuel">Loyer actuel:</label>
+        <input type="number" id="loyerActuel" name="loyerActuel" required>
+        <br>
+        <label for="dateDerniereRevision">Dernière date de révision du loyer:</label>
+        <input type="date" id="dateDerniereRevision" name="dateDerniereRevision" required>
+        <br>
+        <label for="modalitePaiement">Modalité de paiement du loyer:</label>
+        <select id="modalitePaiement" name="modalitePaiement" required>
+            <option value="Annuelle">Annuelle</option>
+            <option value="Quinquennale">Quinquennale</option>
+            <option value="autres">Autres</option>
+        </select>
+        <br>
+        <label for="fraisEnergieInclus">Frais de consommation d'énergie inclus dans le loyer:</label>
+        <select id="fraisEnergieInclus" name="fraisEnergieInclus" required>
+            <option value="Oui">Oui</option>
+            <option value="Non">Non</option>
+        </select>
+        <br>
+        <label for="situationContractuelle">Situation contractuelle:</label>
+        <input type="text" id="situationContractuelle" name="situationContractuelle" required>
+        <br>
+        <label for="commentaires">Commentaires:</label>
+        <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea>
+        <br>
+        <input type="submit" value="Soumettre">
+    </form>
+  {% block content %}{% endblock content %}
+  </body>
+  </html>
+
+ 

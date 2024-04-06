@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un site</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h2>Ajouter un site de radio</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="code_site">Code Site:</label>
+                <input type="text" id="code_site" name="code_site">
+            </div>
+            <div class="form-group">
+                <label for="nom_site">Nom du site:</label>
+                <input type="text" id="nom_site" name="nom_site">
+            </div>
+            <div class="form-group">
+                <label for="direction_regionale">Direction Régionale:</label>
+                <input type="text" id="direction_regionale" name="direction_regionale">
+            </div>
+            <div class="form-group">
+                <label for="longitude">Longitude:</label>
+                <input type="text" id="longitude" name="longitude">
+            </div>
+            <div class="form-group">
+                <label for="latitude">Latitude:</label>
+                <input type="text" id="latitude" name="latitude">
+            </div>
+            <div class="form-group">
+                <label for="type_couverture">Type de couverture:</label>
+                <input type="text" id="type_couverture" name="type_couverture">
+            </div>
+            <div class="form-group">
+                <label for="type_installation_site">Type d’installation Site:</label>
+                <input type="text" id="type_installation_site" name="type_installation_site">
+            </div>
+            <div class="form-group">
+                <label for="type_installation_bts">Type d'installation BTS:</label>
+                <input type="text" id="type_installation_bts" name="type_installation_bts">
+            </div>
+            <div class="form-group">
+                <label for="technologies">Technologies:</label>
+                <input type="text" id="technologies" name="technologies">
+            </div>
+            <div class="form-group">
+                <label for="backhauling">Backhauling:</label>
+                <input type="text" id="backhauling" name="backhauling">
+            </div>
+            <div class="form-group">
+                <label for="site_a_vue">Site à Vue:</label>
+                <input type="text" id="site_a_vue" name="site_a_vue">
+            </div>
+            <div class="form-group">
+                <label for="central_rattachement">Central de rattachement:</label>
+                <input type="text" id="central_rattachement" name="central_rattachement">
+            </div>
+            <div class="form-group">
+                <label for="type_environnement">Type d'environnement:</label>
+                <input type="text" id="type_environnement" name="type_environnement">
+            </div>
+            <div class="form-group">
+                <label for="type_batiment">Type du bâtiment:</label>
+                <input type="text" id="type_batiment" name="type_batiment">
+            </div>
+            <div class="form-group">
+                <label for="hauteur">Hauteur:</label>
+                <input type="text" id="hauteur" name="hauteur">
+            </div>
+            <div class="form-group">
+                <label for="ville">Ville:</label>
+                <input type="text" id="ville" name="ville">
+            </div>
+            <div class="form-group">
+                <label for="code_postal">Code postal:</label>
+                <input type="text" id="code_postal" name="code_postal">
+            </div>
+            <div class="form-group">
+                <label for="date_mise_en_service">Date de mise en service:</label>
+                <input type="text" id="date_mise_en_service" name="date_mise_en_service">
+            </div>
+            <div class="form-group">
+                <label for="autorisation_anf">Autorisation ANF octroyée:</label>
+                <input type="text" id="autorisation_anf" name="autorisation_anf">
+            </div>
+            <div class="form-group">
+                <label for="actions">Actions:</label>
+                <input type="text" id="actions" name="actions">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+
+    
+
+    <script>
+        // Fonction pour gérer la soumission du formulaire
+        document.getElementById("addSiteForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêcher la soumission du formulaire par défaut
+
+            // Récupérer les valeurs saisies par l'utilisateur
+            var siteName = document.getElementById("siteName").value;
+            var siteURL = document.getElementById("siteURL").value;
+
+            // Vous pouvez envoyer ces données au serveur pour les traiter, par exemple en utilisant AJAX
+
+            // Après avoir traité les données, rediriger l'utilisateur vers une autre page si nécessaire
+            window.location.href = "/confirmation_page";
+        });
+    </script>
+</body>
+</html>
