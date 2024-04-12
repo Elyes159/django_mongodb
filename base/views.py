@@ -1,12 +1,100 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required  
 from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from .forms import   LoginForm,LoginFormJ,LoginFormM,AdminForm
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.hashers import make_password
+
+
+
+def home_view(request):
+    return render(request, 'home.html')
+
+
+
+
+def login_user_view(request):
+    template_name = "/login.html"
+    form = LoginForm(data=request.POST or None)
+    
+    if request.method == 'POST':
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect("/")
+    context = {
+        "form": form
+    }
+    return render(request, template_name, context)
+
+
+
+
+######################################################################
+
+def loginss_view(request):
+    return render(request, 'registration/loginss.html')
+
+
+def login_juridique_view(request):
+    template_name = "logins/jur_login.html"
+    form = LoginFormJ(data=request.POST or None)
+    
+    if request.method == 'POST':
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect("/responsable-juridique")
+    context = {
+        "form": form
+    }
+    return render(request, template_name, context)
+
+
+def login_maintenance_view(request):
+    template_name = "logins/main_login.html"
+    form = LoginFormM(data=request.POST or None)
+    
+    if request.method == 'POST':
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect("/res_maintenace")
+    context = {
+        "form": form
+    }
+    return render(request, template_name, context)
+
+def login_admin_view(request):
+    template_name = "logins/admin_login.html"
+    form = AdminForm(data=request.POST or None)
+    
+    if request.method == 'POST':
+        
+        form = AdminForm(data=request.POST or None)
+
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None and user.is_staff:
+                login(request, user)
+                return redirect("/admin_interface")
+            else :
+                print("mafamma chay")
+    context = {
+        "form": form
+    }
+    return render(request, template_name, context)
+
+
+########################################################################
 
 @login_required
 def home(request):
- return render(request, "home.html", {})
-
+    return render(request, "home.html", {})
 
 def authView(request):
  if request.method == "POST":
@@ -25,7 +113,6 @@ def responsable_juridique(request):
 def res_maintenace(request):
     # Votre logique de vue pour l'interface d'administration
     context = {
-        # Mettez ici les données que vous souhaitez transmettre à votre template
     }
     return render(request, 'res_maintenace.html', context)
 
@@ -62,7 +149,6 @@ def add_jui_view(request):
 def modify_jui(request, codeSite):
     # Votre logique de vue ici
     return render(request, 'modify_jui.html')
-
 
 def delete_jui(request):
     if request.method == 'GET':

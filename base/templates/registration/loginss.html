@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <!-- Add any additional meta tags, stylesheets, or scripts here -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to Your Website</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "base:login_admin_view" %}">Continuer en tant qu'Administateur</a></li>
+                <li><a href="{% url "base:login_responsable_juridique" %}">Continuer en tant que responsable juridique</a></li>
+                <li><a href="{% url "base:login_maintenance_view" %}">Continuer en tant que responsable de maintenance</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

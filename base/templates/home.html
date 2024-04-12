@@ -1,39 +1,45 @@
 <!DOCTYPE html>
-<html>
-<head>
-   <title>Telecom tunisie</title>
-  <meta charset='utf-8'>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .custom-navbar .navbar-nav .nav-link {
-      color: blue!important;
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Home </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      nav {
+      position: fixed;
+      top: 0;
+      left: 78px; /* Ajoutez la même largeur que la sidebar */
+      width: calc(100% - 78px); /* Prenez la largeur totale moins la largeur de la sidebar */
+      background-color: #11101D;
+      height: 60px; /* Hauteur de la barre de navigation */
+      z-index: 100; /* Assurez-vous que la barre de navigation est au-dessus de la sidebar */
+      display: flex;
+      align-items: center;
+      padding: 0 20px; /* Ajoutez un espace intérieur */
     }
 
-    .custom-navbar .navbar-nav .nav-link:hover {
-      color: white !important;
-      
+    nav ul {
+      list-style: none;
+      display: flex;
     }
 
-    .custom-navbar .navbar {
-          background-color:black;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+    nav ul li {
+      margin-right: 20px; /* Espacement entre les éléments de la barre de navigation */
     }
-    footer {
-            background-color:black;
-            color: #fff;
-            text-align: center;
-            padding: 1em 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        section {
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #E4E9F7; /* Couleur de survol */
+    }
+              section {
             
             text-align: center;
             max-width: 800px;
@@ -43,62 +49,395 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-  </style>
-</head>
-<body>
-  <div class="container-fluid">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark custom-navbar">
+      /* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'base:admin_interface' %}">Administrateur</a>
-                
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href=>Gérer les comptes</a>
-                    <a class="dropdown-item" href="#">Gérer l’inventaire des sites radio</a>
-                </div>
-            </li>            
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'base:responsable_juridique' %}">Responsable Juridique</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Suivre l’´état juridique des sites radio</a>
-                        <a class="dropdown-item" href="#">Gérer le cycle de vie et la rentabilité des sites radio</a>
-                        <a class="dropdown-item" href="#">Supprimer</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{% url 'base:res_maintenace' %}">Responsable de Maintenance</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Gérer les incidents</a>
-                        <a class="dropdown-item" href="#">Planifier et traçabilité des opérations de maintenance</a>
-                    </div>
-                
-            </ul>
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
-  <section>
-    <h2>Présentation de Mon Site Web</h2>
-    <p> Le site d'outil de management des sites radio télécom en Tunisie offre une plateforme 
-        complète pour la gestion efficace des sites de télécommunications . 
-        Avec une interface conviviale, il fournit des outils permettant la création, 
-        la maintenance et la surveillance en temps réel des sites, ainsi que la planification et l'optimisation du déploiement.
-         Des fonctionnalités avancées de gestion des pannes, de génération de rapports et d'analyses approfondies sont 
-         également disponibles.En mettant l'accent sur l'innovation, la qualité et le service client, cette plateforme est conçue 
-         pour répondre aux besoins spécifiques du secteur des télécommunications en Tunisie, 
-         offrant aux utilisateurs la possibilité de gérer efficacement leurs opérations et d'atteindre
-          leurs objectifs commerciaux.</p>
-</section>
-<footer>
-  <p>© 2024 TUNISIE TELECOM </p>   
-</footer>
-{% block content %}{% endblock content %}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
+    </style>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Tunisie telecom</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-grid-alt'></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+         <span class="tooltip">Dashboard</span>
+      </li>
+      <li>
+       <a href="{% url 'base:admin_interface' %}">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">Administrateur</span>
+       </a>
+       <span class="tooltip">Administrateur</span>
+     </li>
+     <li>
+      <a href="{% url 'base:responsable_juridique' %}">
+        <i class='bx bx-user' ></i>
+        <span class="links_name">Responsable Juridique</span>
+      </a>
+      <span class="tooltip">Responsable Juridique</span>
+    </li>
+    <li>
+      <a href="{% url 'base:res_maintenace' %}">
+        <i class='bx bx-user' ></i>
+        <span class="links_name">Responsable de Maintenance</span>
+      </a>
+      <span class="tooltip">Responsable de Maintenance</span>
+    </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Order</span>
+       </a>
+       <span class="tooltip">Order</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>
+     <li class="profile">
+         <div class="profile-details">
+           <img src="profile.jpg" alt="profileImg">
+           <div class="name_job">
+             <div class="name">Prem Shahi</div>
+             <div class="job">Web designer</div>
+           </div>
+         </div>
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+      <div class="text">
+      
+        <h2>Présentation de Mon Site Web</h2>
+        <p> Le site d'outil de management des sites radio télécom en Tunisie offre une plateforme 
+            complète pour la gestion efficace des sites de télécommunications . 
+            Avec une interface conviviale, il fournit des outils permettant la création, 
+            la maintenance et la surveillance en temps réel des sites, ainsi que la planification et l'optimisation du déploiement.
+             Des fonctionnalités avancées de gestion des pannes, de génération de rapports et d'analyses approfondies sont 
+             également disponibles.En mettant l'accent sur l'innovation, la qualité et le service client, cette plateforme est conçue 
+             pour répondre aux besoins spécifiques du secteur des télécommunications en Tunisie, 
+             offrant aux utilisateurs la possibilité de gérer efficacement leurs opérations et d'atteindre
+              leurs objectifs commerciaux.</p>
+            </div> 
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+  </script>
 </body>
 </html>
