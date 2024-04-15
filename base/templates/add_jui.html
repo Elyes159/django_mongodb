@@ -1,30 +1,74 @@
-  <!DOCTYPE html>
-  <!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
-  <html lang="en" dir="ltr">
-    <head>
-      <meta charset="UTF-8">
-      <title>Ajouter l’état juridique des sites radio</title>
-      <link rel="stylesheet" href="style.css">
-      <style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+<!DOCTYPE html>
+<!-- Created by CodingLab |www.youtube.com/CodingLabYT-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ajouter l’état juridique des sites radio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
 
 h1 {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    display: inline-block;
-    width: 180px;
-    margin-bottom: 10px;
+  display: inline-block;
+  width: 180px;
+  margin-bottom: 10px;
 }
 
 input[type="text"],
@@ -32,646 +76,641 @@ input[type="number"],
 input[type="date"],
 select,
 textarea {
-    width: calc(100% - 200px);
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+  width: calc(100% - 200px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 input[type="submit"] {
-    width: 100%;
-    background-color: blue;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  width: 100%;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 input[type="submit"]:hover {
-    background-color: #4556a0;
+  background-color: #4556a0;
 }
-         body {
-          font-family: Arial, sans-serif;
-          background-color: #f4f4f4;
-          margin: 0;
-          padding: 0;
-      }
-      
-      .container {
-          max-width: 600px;
-          margin: 20px auto;
-          padding: 20px;
-          background-color: #fff;
-          border-radius: 5px;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      }
-      
-      h2 {
-          text-align: center;
-          margin-bottom: 20px;
-      }
-      
-      .form-group {
-          margin-bottom: 20px;
-      }
-      
-      label {
-          font-weight: bold;
-      }
-      
-      input[type="text"],
-      input[type="number"],
-      select {
-          width: 100%;
-          padding: 10px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-      }
-      
-      input[type="submit"] {
-          background-color: #007bff;
-          color: #fff;
-          padding: 10px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-size: 16px;
-      }
-      
-      input[type="submit"]:hover {
-          background-color: #0056b3;
-      } 
-          footer {
-      background-color: #11101D;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-       }
-       header {
-      background-color: #11101D;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      position: fixed;
-      top: 0; /* Positionner l'en-tête en haut de la page */
-      left: 0; /* Aligner l'en-tête à gauche */
-      right: 0; /* Aligner l'en-tête à droite */
-      z-index: 100; /* Assurez-vous que l'en-tête est au-dessus de la barre latérale */
-      }
-          main {
-      padding: 20px;
-      }
-  
-      table {
-      width: 100%;
-      border-collapse: collapse;
-      }
-  
-      th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      }
-  
-     th {
-      background-color: #f2f2f2;
-     }
-  
-    tr:hover {
-      background-color: #f5f5f5;
-      }
-        nav {
-        position: fixed;
-        top: 0;
-        left: 78px; /* Ajoutez la même largeur que la sidebar */
-        width: calc(100% - 78px); /* Prenez la largeur totale moins la largeur de la sidebar */
-        background-color: #11101D;
-        height: 60px; /* Hauteur de la barre de navigation */
-        z-index: 100; /* Assurez-vous que la barre de navigation est au-dessus de la sidebar */
-        display: flex;
-        align-items: center;
-        padding: 0 20px; /* Ajoutez un espace intérieur */
-      }
-  
-      nav ul {
-        list-style: none;
-        display: flex;
-      }
-  
-      nav ul li {
-        margin-right: 20px; /* Espacement entre les éléments de la barre de navigation */
-      }
-  
-      nav ul li a {
-        text-decoration: none;
+       body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+        background-color: #007bff;
         color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
         font-size: 16px;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-  
-      nav ul li a:hover {
-        color: #E4E9F7; /* Couleur de survol */
-      }
-                section {
-              
-              text-align: center;
-              max-width: 800px;
-              margin: 20px auto;
-              padding: 20px;
-              background-color: #fff;
-              border-radius: 5px;
-              box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-          }
-        /* Google Font Link */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
-  }
-  .sidebar{
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    } 
+        footer {
+    background-color: #11101D;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
     position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 78px;
-    background: #11101D;
-    padding: 6px 14px;
-    z-index: 99;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open{
-    width: 250px;
-  }
-  .sidebar .logo-details{
-    height: 60px;
-    display: flex;
-    align-items: center;
-    position: relative;
-  }
-  .sidebar .logo-details .icon{
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .sidebar .logo-details .logo_name{
+    bottom: 0;
+    width: 100%;
+     }
+     header {
+    background-color: #11101D;
     color: #fff;
-    font-size: 20px;
-    font-weight: 600;
-    opacity: 0;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .logo-details .icon,
-  .sidebar.open .logo-details .logo_name{
-    opacity: 1;
-  }
-  .sidebar .logo-details #btn{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    font-size: 22px;
-    transition: all 0.4s ease;
-    font-size: 23px;
+    padding: 20px;
     text-align: center;
-    cursor: pointer;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .logo-details #btn{
-    text-align: right;
-  }
-  .sidebar i{
-    color: #fff;
-    height: 60px;
-    min-width: 50px;
-    font-size: 28px;
-    text-align: center;
-    line-height: 60px;
-  }
-  .sidebar .nav-list{
-    margin-top: 20px;
-    height: 100%;
-  }
-  .sidebar li{
-    position: relative;
-    margin: 8px 0;
-    list-style: none;
-  }
+    position: fixed;
+    top: 0; /* Positionner l'en-tête en haut de la page */
+    left: 0; /* Aligner l'en-tête à gauche */
+    right: 0; /* Aligner l'en-tête à droite */
+    z-index: 100; /* Assurez-vous que l'en-tête est au-dessus de la barre latérale */
+    }
+        main {
+    padding: 20px;
+    }
+
+    table {
+    width: 100%;
+    border-collapse: collapse;
+    }
+
+    th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    }
+
+   th {
+    background-color: #f2f2f2;
+   }
+
+  tr:hover {
+    background-color: #f5f5f5;
+    }
+      nav {
+      position: fixed;
+      top: 0;
+      left: 78px; /* Ajoutez la même largeur que la sidebar */
+      width: calc(100% - 78px); /* Prenez la largeur totale moins la largeur de la sidebar */
+      background-color: #11101D;
+      height: 60px; /* Hauteur de la barre de navigation */
+      z-index: 100; /* Assurez-vous que la barre de navigation est au-dessus de la sidebar */
+      display: flex;
+      align-items: center;
+      padding: 0 20px; /* Ajoutez un espace intérieur */
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-right: 20px; /* Espacement entre les éléments de la barre de navigation */
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #E4E9F7; /* Couleur de survol */
+    }
+              section {
+            
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+      /* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar .logo-details .logo_name{
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  background: #E4E9F7;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.home-section .text{
+  display: inline-block;
+  color: #11101d;
+  font-size: 25px;
+  font-weight: 500;
+  margin: 18px
+}
+
+@media (max-width: 420px) {
   .sidebar li .tooltip{
-    position: absolute;
-    top: -20px;
-    left: calc(100% + 15px);
-    z-index: 3;
-    background: #fff;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 15px;
-    font-weight: 400;
-    opacity: 0;
-    white-space: nowrap;
-    pointer-events: none;
-    transition: 0s;
-  }
-  .sidebar li:hover .tooltip{
-    opacity: 1;
-    pointer-events: auto;
-    transition: all 0.4s ease;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  .sidebar.open li .tooltip{
     display: none;
   }
-  .sidebar input{
-    font-size: 15px;
-    color: #FFF;
-    font-weight: 400;
-    outline: none;
-    height: 50px;
-    width: 100%;
-    width: 50px;
-    border: none;
-    border-radius: 12px;
-    transition: all 0.5s ease;
-    background: #1d1b31;
-  }
-  .sidebar.open input{
-    padding: 0 20px 0 50px;
-    width: 100%;
-  }
-  .sidebar .bx-search{
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    font-size: 22px;
-    background: #1d1b31;
-    color: #FFF;
-  }
-  .sidebar.open .bx-search:hover{
-    background: #1d1b31;
-    color: #FFF;
-  }
-  .sidebar .bx-search:hover{
-    background: #FFF;
-    color: #11101d;
-  }
-  .sidebar li a{
-    display: flex;
-    height: 100%;
-    width: 100%;
-    border-radius: 12px;
-    align-items: center;
-    text-decoration: none;
-    transition: all 0.4s ease;
-    background: #11101D;
-  }
-  .sidebar li a:hover{
-    background: #FFF;
-  }
-  .sidebar li a .links_name{
-    color: #fff;
-    font-size: 15px;
-    font-weight: 400;
-    white-space: nowrap;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.4s;
-  }
-  .sidebar.open li a .links_name{
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .sidebar li a:hover .links_name,
-  .sidebar li a:hover i{
-    transition: all 0.5s ease;
-    color: #11101D;
-  }
-  .sidebar li i{
-    height: 50px;
-    line-height: 50px;
-    font-size: 18px;
-    border-radius: 12px;
-  }
-  .sidebar li.profile{
-    position: fixed;
-    height: 60px;
-    width: 78px;
-    left: 0;
-    bottom: -8px;
-    padding: 10px 14px;
-    background: #1d1b31;
-    transition: all 0.5s ease;
-    overflow: hidden;
-  }
-  .sidebar.open li.profile{
-    width: 250px;
-  }
-  .sidebar li .profile-details{
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-  }
-  .sidebar li img{
-    height: 45px;
-    width: 45px;
-    object-fit: cover;
-    border-radius: 6px;
-    margin-right: 10px;
-  }
-  .sidebar li.profile .name,
-  .sidebar li.profile .job{
-    font-size: 15px;
-    font-weight: 400;
-    color: #fff;
-    white-space: nowrap;
-  }
-  .sidebar li.profile .job{
-    font-size: 12px;
-  }
-  .sidebar .profile #log_out{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    background: #1d1b31;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
-    border-radius: 0px;
-    transition: all 0.5s ease;
-  }
-  .sidebar.open .profile #log_out{
-    width: 50px;
-    background: none;
-  }
-  .home-section{
-    position: relative;
-    background: #E4E9F7;
-    min-height: 100vh;
-    top: 0;
-    left: 78px;
-    width: calc(100% - 78px);
-    transition: all 0.5s ease;
-    z-index: 2;
-  }
-  .sidebar.open ~ .home-section{
-    left: 250px;
-    width: calc(100% - 250px);
-  }
-  .home-section .text{
-    display: inline-block;
-    color: #11101d;
-    font-size: 25px;
-    font-weight: 500;
-    margin: 18px
-  }
-  
-  @media (max-width: 420px) {
-    .sidebar li .tooltip{
-      display: none;
-    }
-  }
-      </style>
-      <!-- Boxicons CDN Link -->
-      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     </head>
-  <body>
-      <header>
-          <h1>Ajouter l’état juridique des sites radio</h1>
-      </header>
-    <div class="sidebar">
-      <div class="logo-details">
-        <i class='bx bxl-c-plus-plus icon'></i>
-          <div class="logo_name">Tunisie telecom</div>
-          <i class='bx bx-menu' id="btn" ></i>
-      </div>
-      <ul class="nav-list">
-        <li>
-            <i class='bx bx-search' ></i>
-           <input type="text" placeholder="Search...">
-           <span class="tooltip">Search</span>
+}
+    </style>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+    <header>
+        <h1>Ajouter l’état juridique des sites radio</h1>
+    </header>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxl-c-plus-plus icon'></i>
+        <div class="logo_name">Tunisie telecom</div>
+        <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav-list">
+      <li>
+          <i class='bx bx-search' ></i>
+         <input type="text" placeholder="Search...">
+         <span class="tooltip">Search</span>
+      </li>
+      <li>
+          <a href="{% url 'base:responsable_juridique' %}">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Responsable Juridique</span>
+          </a>
+          <span class="tooltip">Responsable Juridique</span>
         </li>
-        <li>
+     <li>
+       <a href="#">
+         <i class='bx bx-chat' ></i>
+         <span class="links_name">Messages</span>
+       </a>
+       <span class="tooltip">Messages</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-pie-chart-alt-2' ></i>
+         <span class="links_name">Analytics</span>
+       </a>
+       <span class="tooltip">Analytics</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-folder' ></i>
+         <span class="links_name">File Manager</span>
+       </a>
+       <span class="tooltip">Files</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cart-alt' ></i>
+         <span class="links_name">Order</span>
+       </a>
+       <span class="tooltip">Order</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-heart' ></i>
+         <span class="links_name">Saved</span>
+       </a>
+       <span class="tooltip">Saved</span>
+     </li>
+     <li>
+       <a href="#">
+         <i class='bx bx-cog' ></i>
+         <span class="links_name">Setting</span>
+       </a>
+       <span class="tooltip">Setting</span>
+     </li>          
+         <li>
             <a href="{% url 'base:responsable_juridique' %}">
-              <i class='bx bx-user' ></i>
+              <i class='bx bx-log-out' id="log_out" ></i>
               <span class="links_name">Responsable Juridique</span>
             </a>
             <span class="tooltip">Responsable Juridique</span>
           </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-chat' ></i>
-           <span class="links_name">Messages</span>
-         </a>
-         <span class="tooltip">Messages</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-pie-chart-alt-2' ></i>
-           <span class="links_name">Analytics</span>
-         </a>
-         <span class="tooltip">Analytics</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-folder' ></i>
-           <span class="links_name">File Manager</span>
-         </a>
-         <span class="tooltip">Files</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-cart-alt' ></i>
-           <span class="links_name">Order</span>
-         </a>
-         <span class="tooltip">Order</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-heart' ></i>
-           <span class="links_name">Saved</span>
-         </a>
-         <span class="tooltip">Saved</span>
-       </li>
-       <li>
-         <a href="#">
-           <i class='bx bx-cog' ></i>
-           <span class="links_name">Setting</span>
-         </a>
-         <span class="tooltip">Setting</span>
-       </li>          
-           <li>
-              <a href="{% url 'base:responsable_juridique' %}">
-                <i class='bx bx-log-out' id="log_out" ></i>
-                <span class="links_name">Responsable Juridique</span>
-              </a>
-              <span class="tooltip">Responsable Juridique</span>
-            </li>
-       
-      </ul>
+     
+    </ul>
+  </div>
+    <div class="container">
+        <h2>Ajouter un site de radio</h2>
+        <h1></h1>
+        <form id="formulaire">
+            <label for="codeSite">Code Site:</label>
+            <input type="text" id="codeSite" name="codeSite" required>
+            <br>
+            <label for="nomSite">Nom Site:</label>
+            <input type="text" id="nomSite" name="nomSite" required>
+            <br>
+            <label for="directionRegionale">Direction Régionale:</label>
+            <input type="text" id="directionRegionale" name="directionRegionale" required>
+            <br>
+            <label for="nomProprietaire">Nom du Propriétaire:</label>
+            <input type="text" id="nomProprietaire" name="nomProprietaire" required>
+            <br>
+            <label for="typeContrat">Type de contrat:</label>
+            <select id="typeContrat" name="typeContrat" required>
+                <option value="Contrat privé">Contrat privé</option>
+                <option value="Convention de partage">Convention de partage</option>
+                <option value="Contrat B2B">Contrat B2B</option>
+                <option value="Sans contrat">Sans contrat</option>
+                <option value="autres">Autres</option>
+            </select>
+            <br>
+            <label for="dateSignature">Date de signature:</label>
+            <input type="date" id="dateSignature" name="dateSignature" required>
+            <br>
+            <label for="dateDebutContrat">Date début contrat:</label>
+            <input type="date" id="dateDebutContrat" name="dateDebutContrat" required>
+            <br>
+            <label for="dateFinContrat">Date fin contrat:</label>
+            <input type="date" id="dateFinContrat" name="dateFinContrat" required>
+            <br>
+            <label for="dureeContrat">Durée du contrat:</label>
+            <input type="text" id="dureeContrat" name="dureeContrat" required>
+            <br>
+            <label for="modeRenouvellementContrat">Mode de renouvellement du contrat:</label>
+            <select id="modeRenouvellementContrat" name="modeRenouvellementContrat" required>
+                <option value="Non renouvelable">Non renouvelable</option>
+                <option value="Renouvelable par tacite reconduction">Renouvelable par tacite reconduction</option>
+                <option value="autres">Autres</option>
+            </select>
+            <br>
+            <label for="dureeRenouvellement">Durée de renouvellement:</label>
+            <input type="text" id="dureeRenouvellement" name="dureeRenouvellement" required>
+            <br>
+            <label for="superficieLouee">Superficie louée (m²):</label>
+            <input type="number" id="superficieLouee" name="superficieLouee" required>
+            <br>
+            <label for="presenceClauseContractuelle">Présence de clause contractuelle autorisant le partage in:</label>
+            <select id="presenceClauseContractuelle" name="presenceClauseContractuelle" required>
+                <option value="Oui">Oui</option>
+                <option value="Non">Non</option>
+            </select>
+            <br>
+            <label for="loyerAnnuel">Loyer annuel:</label>
+            <input type="number" id="loyerAnnuel" name="loyerAnnuel" required>
+            <br>
+            <label for="pourcentageAugmentation">Pourcentage contractuel d'augmentation du loyer:</label>
+            <input type="number" id="pourcentageAugmentation" name="pourcentageAugmentation" required>
+            <br>
+            <label for="periodiciteAugmentation">Périodicité d'augmentation du loyer:</label>
+            <select id="periodiciteAugmentation" name="periodiciteAugmentation" required>
+                <option value="Annuelle">Annuelle</option>
+                <option value="Quinquennale">Quinquennale</option>
+                <option value="autres">Autres</option>
+            </select>
+            <br>
+            <label for="loyerActuel">Loyer actuel:</label>
+            <input type="number" id="loyerActuel" name="loyerActuel" required>
+            <br>
+            <label for="dateDerniereRevision">Dernière date de révision du loyer:</label>
+            <input type="date" id="dateDerniereRevision" name="dateDerniereRevision" required>
+            <br>
+            <label for="modalitePaiement">Modalité de paiement du loyer:</label>
+            <select id="modalitePaiement" name="modalitePaiement" required>
+                <option value="Annuelle">Annuelle</option>
+                <option value="Quinquennale">Quinquennale</option>
+                <option value="autres">Autres</option>
+            </select>
+         
+        
+            <br>
+            <label for="situationContractuelle">Situation contractuelle:</label>
+            <input type="text" id="situationContractuelle" name="situationContractuelle" required>
+            <br>
+            <label for="commentaires">Commentaires:</label>
+            <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea>
+            <br>
+            <input type="submit" value="Soumettre">
+        </form>
     </div>
-      <div class="container">
-          <h2>Ajouter un site de radio</h2>
-          <h1></h1>
-          <form id="formulaire">
-              <label for="codeSite">Code Site:</label>
-              <input type="text" id="codeSite" name="codeSite" required>
-              <br>
-              <label for="nomSite">Nom Site:</label>
-              <input type="text" id="nomSite" name="nomSite" required>
-              <br>
-              <label for="directionRegionale">Direction Régionale:</label>
-              <input type="text" id="directionRegionale" name="directionRegionale" required>
-              <br>
-              <label for="nomProprietaire">Nom du Propriétaire:</label>
-              <input type="text" id="nomProprietaire" name="nomProprietaire" required>
-              <br>
-              <label for="typeContrat">Type de contrat:</label>
-              <select id="typeContrat" name="typeContrat" required>
-                  <option value="Contrat privé">Contrat privé</option>
-                  <option value="Convention de partage">Convention de partage</option>
-                  <option value="Contrat B2B">Contrat B2B</option>
-                  <option value="Sans contrat">Sans contrat</option>
-                  <option value="autres">Autres</option>
-              </select>
-              <br>
-              <label for="dateSignature">Date de signature:</label>
-              <input type="date" id="dateSignature" name="dateSignature" required>
-              <br>
-              <label for="dateDebutContrat">Date début contrat:</label>
-              <input type="date" id="dateDebutContrat" name="dateDebutContrat" required>
-              <br>
-              <label for="dateFinContrat">Date fin contrat:</label>
-              <input type="date" id="dateFinContrat" name="dateFinContrat" required>
-              <br>
-              <label for="dureeContrat">Durée du contrat:</label>
-              <input type="text" id="dureeContrat" name="dureeContrat" required>
-              <br>
-              <label for="modeRenouvellementContrat">Mode de renouvellement du contrat:</label>
-              <select id="modeRenouvellementContrat" name="modeRenouvellementContrat" required>
-                  <option value="Non renouvelable">Non renouvelable</option>
-                  <option value="Renouvelable par tacite reconduction">Renouvelable par tacite reconduction</option>
-                  <option value="autres">Autres</option>
-              </select>
-              <br>
-              <label for="dureeRenouvellement">Durée de renouvellement:</label>
-              <input type="text" id="dureeRenouvellement" name="dureeRenouvellement" required>
-              <br>
-              <label for="superficieLouee">Superficie louée (m²):</label>
-              <input type="number" id="superficieLouee" name="superficieLouee" required>
-              <br>
-              <label for="presenceClauseContractuelle">Présence de clause contractuelle autorisant le partage in:</label>
-              <select id="presenceClauseContractuelle" name="presenceClauseContractuelle" required>
-                  <option value="Oui">Oui</option>
-                  <option value="Non">Non</option>
-              </select>
-              <br>
-              <label for="loyerAnnuel">Loyer annuel:</label>
-              <input type="number" id="loyerAnnuel" name="loyerAnnuel" required>
-              <br>
-              <label for="pourcentageAugmentation">Pourcentage contractuel d'augmentation du loyer:</label>
-              <input type="number" id="pourcentageAugmentation" name="pourcentageAugmentation" required>
-              <br>
-              <label for="periodiciteAugmentation">Périodicité d'augmentation du loyer:</label>
-              <select id="periodiciteAugmentation" name="periodiciteAugmentation" required>
-                  <option value="Annuelle">Annuelle</option>
-                  <option value="Quinquennale">Quinquennale</option>
-                  <option value="autres">Autres</option>
-              </select>
-              <br>
-              <label for="loyerActuel">Loyer actuel:</label>
-              <input type="number" id="loyerActuel" name="loyerActuel" required>
-              <br>
-              <label for="dateDerniereRevision">Dernière date de révision du loyer:</label>
-              <input type="date" id="dateDerniereRevision" name="dateDerniereRevision" required>
-              <br>
-              <label for="modalitePaiement">Modalité de paiement du loyer:</label>
-              <select id="modalitePaiement" name="modalitePaiement" required>
-                  <option value="Annuelle">Annuelle</option>
-                  <option value="Quinquennale">Quinquennale</option>
-                  <option value="autres">Autres</option>
-              </select>
-              <br>
-              <label for="fraisEnergieInclus">Frais de consommation d'énergie inclus dans le loyer:</label>
-              <select id="fraisEnergieInclus" name="fraisEnergieInclus" required>
-                  <option value="Oui">Oui</option>
-                  <option value="Non">Non</option>
-              </select>
-              <br>
-              <label for="situationContractuelle">Situation contractuelle:</label>
-              <input type="text" id="situationContractuelle" name="situationContractuelle" required>
-              <br>
-              <label for="commentaires">Commentaires:</label>
-              <textarea id="commentaires" name="commentaires" rows="4" cols="50"></textarea>
-              <br>
-              <input type="submit" value="Soumettre">
-          </form>
-      </div>
-  </body>
-  
-  <footer>© 2024 TUNISIE TELECOM </footer> 
-  
-      <script>
-           let sidebar = document.querySelector(".sidebar");
-    let closeBtn = document.querySelector("#btn");
-    let searchBtn = document.querySelector(".bx-search");
-  
-    closeBtn.addEventListener("click", ()=>{
-      sidebar.classList.toggle("open");
-      menuBtnChange();//calling the function(optional)
-    });
-  
-    searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-      sidebar.classList.toggle("open");
-      menuBtnChange(); //calling the function(optional)
-    });
-  
-    // following are the code to change sidebar button(optional)
-    function menuBtnChange() {
-     if(sidebar.classList.contains("open")){
-       closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-     }else {
-       closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-     }
-    }
-          // Fonction pour gérer la soumission du formulaire
-          document.getElementById("addSiteForm").addEventListener("submit", function(event) {
-              event.preventDefault(); // Empêcher la soumission du formulaire par défaut
-  
-              // Récupérer les valeurs saisies par l'utilisateur
-              var siteName = document.getElementById("siteName").value;
-              var siteURL = document.getElementById("siteURL").value;
-  
-              // Vous pouvez envoyer ces données au serveur pour les traiter, par exemple en utilisant AJAX
-  
-              // Après avoir traité les données, rediriger l'utilisateur vers une autre page si nécessaire
-              window.location.href = "/confirmation_page";
-          });
-      </script>
-  </body>
-  </html>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+</body>
+
+<footer>© 2024 TUNISIE TELECOM </footer> 
+
+    <script>
+         let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();//calling the function(optional)
+  });
+
+  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+    sidebar.classList.toggle("open");
+    menuBtnChange(); //calling the function(optional)
+  });
+
+  // following are the code to change sidebar button(optional)
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+   }
+  }
+        // Fonction pour gérer la soumission du formulaire
+        document.getElementById("addSiteForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêcher la soumission du formulaire par défaut
+
+            // Récupérer les valeurs saisies par l'utilisateur
+            var siteName = document.getElementById("siteName").value;
+            var siteURL = document.getElementById("siteURL").value;
+
+            // Vous pouvez envoyer ces données au serveur pour les traiter, par exemple en utilisant AJAX
+
+            // Après avoir traité les données, rediriger l'utilisateur vers une autre page si nécessaire
+            window.location.href = "/confirmation_page";
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

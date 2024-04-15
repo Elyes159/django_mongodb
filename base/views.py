@@ -3,17 +3,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required  
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
-from .forms import   LoginForm,LoginFormJ,LoginFormM,AdminForm
-from django.contrib.auth import authenticate, login
-from django.contrib.auth.hashers import make_password
-
-
+from django.contrib.auth import login
+from .forms import   LoginForm
 
 def home_view(request):
     return render(request, 'home.html')
-
-
-
 
 def login_user_view(request):
     template_name = "/login.html"
@@ -28,73 +22,9 @@ def login_user_view(request):
         "form": form
     }
     return render(request, template_name, context)
-
-
-
-
-######################################################################
-
-def loginss_view(request):
-    return render(request, 'registration/loginss.html')
-
-
-def login_juridique_view(request):
-    template_name = "logins/jur_login.html"
-    form = LoginFormJ(data=request.POST or None)
-    
-    if request.method == 'POST':
-        if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            return redirect("/responsable-juridique")
-    context = {
-        "form": form
-    }
-    return render(request, template_name, context)
-
-
-def login_maintenance_view(request):
-    template_name = "logins/main_login.html"
-    form = LoginFormM(data=request.POST or None)
-    
-    if request.method == 'POST':
-        if form.is_valid():
-            user = form.get_user()
-            login(request, user)
-            return redirect("/res_maintenace")
-    context = {
-        "form": form
-    }
-    return render(request, template_name, context)
-
-def login_admin_view(request):
-    template_name = "logins/admin_login.html"
-    form = AdminForm(data=request.POST or None)
-    
-    if request.method == 'POST':
-        
-        form = AdminForm(data=request.POST or None)
-
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user = authenticate(request, username=username, password=password)
-            if user is not None and user.is_staff:
-                login(request, user)
-                return redirect("/admin_interface")
-            else :
-                print("mafamma chay")
-    context = {
-        "form": form
-    }
-    return render(request, template_name, context)
-
-
-########################################################################
-
 @login_required
 def home(request):
-    return render(request, "home.html", {})
+ return render(request, "home.html", {})
 
 def authView(request):
  if request.method == "POST":
@@ -113,6 +43,7 @@ def responsable_juridique(request):
 def res_maintenace(request):
     # Votre logique de vue pour l'interface d'administration
     context = {
+        # Mettez ici les données que vous souhaitez transmettre à votre template
     }
     return render(request, 'res_maintenace.html', context)
 
@@ -163,3 +94,45 @@ def delete_jui(request):
     else:
         # Si une méthode HTTP autre que GET est utilisée, renvoyer une réponse HTTP 405 (Méthode non autorisée)
         return HttpResponse(status=405)
+
+
+def admin_interface(request):
+    # Votre logique de vue ici
+    return render(request, 'admin_interface.html', {})
+ 
+def informations(request):
+    # Votre logique de vue ici
+    return render(request, 'informations.html', {})
+
+def Colocation(request):
+    # Votre logique de vue ici
+    return render(request, 'Colocation.html', {})
+
+
+def Equipment_actifs(request):
+    # Votre logique de vue ici
+    return render(request, 'Equipment_actifs.html', {})
+
+def O_M(request):
+    # Votre logique de vue ici
+    return render(request, 'O_M.html', {})
+
+def Energie(request):
+    # Votre logique de vue ici
+    return render(request, 'Energie.html', {})
+
+def espace (request):
+    # Votre logique de vue ici
+    return render(request, 'espace .html', {})
+
+def structure (request):
+    # Votre logique de vue ici
+    return render(request, 'structure.html', {})
+
+def acces(request):
+    # Votre logique de vue ici
+    return render(request, 'acces.html', {})
+
+def consultant(request):
+    # Votre logique de vue ici
+    return render(request, 'consultant.html', {})

@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Colocation </title>
+  <title>Informations Générales </title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* Ajoutez vos styles CSS ici */
@@ -349,11 +349,11 @@
           <span class="tooltip">Search</span>
         </li>
         <li>
-          <a href="{% url 'base:responsable_juridique' %}">
+          <a href="{% url 'base:admin_interface' %}">
             <i class='bx bx-user' ></i>
-            <span class="links_name">Responsable Juridique</span>
+            <span class="links_name">Administrateur</span>
           </a>
-          <span class="tooltip">Responsable Juridique</span>
+          <span class="tooltip">Administrateur</span>
         </li>
         <li>
           <a href="#">
@@ -398,11 +398,11 @@
           <span class="tooltip">Setting</span>
         </li>
         <li>
-          <a href="{% url 'base:home' %}">
+          <a href="{% url 'base:admin_interface' %}">
             <i class='bx bx-log-out' id="log_out"></i>
-            <span class="links_name">Home</span>
+            <span class="links_name">Administrateur</span>
           </a>
-          <span class="tooltip">Home</span>
+          <span class="tooltip">Administrateur</span>
         </li>
       </ul>
     </div>
@@ -410,7 +410,7 @@
     <section class="home-section">
       <div class="">
         <header>
-            <h1>Propriété & Location	</h1>
+            <h1>Informations Générales</h1>
         </header>
         <main>
             <table>
@@ -419,23 +419,19 @@
                         <th>Code Site</th>
                         <th>Nom Site</th>
                         <th>Direction Régionale</th>
-                        <th>Nom du Propriétaire</th>
-                        <th>Type de contrat</th>
-                        <th>Date de signature</th>
-                        <th>Date début contrat</th>
-                        <th>Date fin contrat</th>
-                        <th>Durée du contrat</th>
-                        <th>Mode de renouvellement du contrat</th>
-                        <th>Durée de renouvellement</th>
-                        <th>Superficie louée (m²)</th>
-                        <th>Présence de clause contractuelle autorisant le partage</th>
-                        <th>Loyer annuel</th>
-                        <th>% Contractuel d'augmentation du loyer</th>
-                        <th>Périodicité d'augmentation du loyer</th>
-                        <th>Loyer actuel</th>
-                        <th>Dernière date de révision du loyer</th>
-                        <th>Modalité de paiement du loyer</th>
-                        <th>Situation contractuelle</th>
+                        <th>Longitude</th>
+                        <th>Latitude</th>
+                        <th>Type de couverture</th>
+                        <th>Type d’installation Site</th>
+                        <th>Type d'installation BTS</th>
+                        <th>Technologies</th>
+                        <th>Backhauling </th>
+                        <th>Central de ratachement</th>
+                        <th>Type d'environnement </th>
+                        <th>Type du batiment</th>
+                        <th>Ville</th>
+                        <th>Autorisation ANF octroyée</th>
+                        <th>Date de mise en service</th>  
                     </tr>
                 </thead>
                <td>
@@ -454,7 +450,7 @@
   </div>
   
   <script>
-    let sidebar = document.querySelector(".sidebar");
+  let sidebar = document.querySelector(".sidebar");
   let closeBtn = document.querySelector("#btn");
   let searchBtn = document.querySelector(".bx-search");
 
@@ -479,7 +475,7 @@
       // Function to handle the "Ajouter" button click
       function handleAddButtonClick() {
         // Redirect to the page where you can add new data
-        window.location.href = "/add_jui";
+        window.location.href = "/add_site";
     }
     
     // Function to handle the "Modifier" button click
@@ -487,7 +483,7 @@
         // Redirect to the page where you can modify data
         // Replace "codeSite" with the actual ID of the site to be modified
         var codeSite = "codeSite"; // Replace this with the actual ID of the site
-        window.location.href = "/modify_jui/" + codeSite;
+        window.location.href = "/modify_site/" + codeSite;
     }
     
     // Function to handle the "Supprimer" button click
@@ -495,84 +491,9 @@
         // Send an AJAX request or redirect to the backend to delete the data
         if (confirm("Êtes-vous sûr de vouloir supprimer ce site?")) {
             // Here you can make an AJAX request or redirect to the backend URL to delete the data
-            window.location.href = "/delete_jui";
+            window.location.href = "/delete_site";
         }
     }
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

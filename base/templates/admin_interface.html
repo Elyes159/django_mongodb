@@ -3,51 +3,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Informations Générales </title>
+    <title> Home </title>
     <link rel="stylesheet" href="style.css">
     <style>
-        
-        footer {
-    background-color: #11101D;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-     }
-     header {
-    background-color: #11101D;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    position: fixed;
-    top: 0; /* Positionner l'en-tête en haut de la page */
-    left: 0; /* Aligner l'en-tête à gauche */
-    right: 0; /* Aligner l'en-tête à droite */
-    z-index: 100; /* Assurez-vous que l'en-tête est au-dessus de la barre latérale */
-    }
-        main {
-    padding: 20px;
-    }
-
-    table {
-    width: 100%;
-    border-collapse: collapse;
-    }
-
-    th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    }
-
-   th {
-    background-color: #f2f2f2;
-   }
-
-  tr:hover {
-    background-color: #f5f5f5;
-    }
+    
       nav {
       position: fixed;
       top: 0;
@@ -346,171 +305,118 @@
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<body>
-    <header>
-        <h1>Informations Générales	</h1>
+     <header>
+      <h1></h1>
     </header>
-  <div class="sidebar">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus icon'></i>
-        <div class="logo_name">Tunisie telecom</div>
-        <i class='bx bx-menu' id="btn" ></i>
-    </div>
-    <ul class="nav-list">
-      <li>
-          <i class='bx bx-search' ></i>
-         <input type="text" placeholder="Search...">
-         <span class="tooltip">Search</span>
-      </li>
-      <li>
-       <a href="{% url 'base:admin_interface' %}">
-         <i class='bx bx-user' ></i>
-         <span class="links_name">Administrateur</span>
-       </a>
-       <span class="tooltip">Administrateur</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-chat' ></i>
-         <span class="links_name">Messages</span>
-       </a>
-       <span class="tooltip">Messages</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-pie-chart-alt-2' ></i>
-         <span class="links_name">Analytics</span>
-       </a>
-       <span class="tooltip">Analytics</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-folder' ></i>
-         <span class="links_name">File Manager</span>
-       </a>
-       <span class="tooltip">Files</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cart-alt' ></i>
-         <span class="links_name">Order</span>
-       </a>
-       <span class="tooltip">Order</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-heart' ></i>
-         <span class="links_name">Saved</span>
-       </a>
-       <span class="tooltip">Saved</span>
-     </li>
-     <li>
-       <a href="#">
-         <i class='bx bx-cog' ></i>
-         <span class="links_name">Setting</span>
-       </a>
-       <span class="tooltip">Setting</span>
-       <li>
-        <a href="{% url 'base:home' %}">
-            <i class='bx bx-log-out' id="log_out"></i>
-            <span class="links_name">Home</span>
-          </a>  
-        <span class="tooltip">Home</span>
-      </li>
-    </ul>
-  </div>
-
-  <section >
-      <div class="">
-        
-        <main>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Code Site</th>
-                        <th>Nom du site</th>
-                        <th>Direction Régionale</th>
-                        <th>Longitude</th>
-                        <th>Latitude</th>
-                        <th>Type de couverture</th>
-                        <th>Type d’installation Site</th>
-                        <th>Type d'installation BTS</th>
-                        <th>Technologies</th>
-                        <th>Backhauling</th>
-                        <th>Site à Vue</th>
-                        <th>Central de rattachement</th>
-                        <th>Type d'environnement</th>
-                        <th>Type du bâtiment</th>
-                        <th>Hauteur</th>
-                        <th>Ville</th>
-                        <th>Code postal</th>
-                        <th>Date de mise en service</th>
-                        <th>Autorisation ANF octroyée</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-               <td>
-        <button onclick="handleModifyButtonClick('123')">Modifier</button>
-        <button onclick="handleDeleteButtonClick('123')">Supprimer</button>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <button id="addButton" onclick="handleAddButtonClick()">Ajouter</button>
-    </main>
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus icon'></i>
+          <div class="logo_name">Tunisie telecom</div>
+          <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul class="nav-list">
+          <li>
+            <i class='bx bx-search'></i>
+            <input type="text" placeholder="Search...">
+            <span class="tooltip">Search</span>
+          </li>
+          <li>
+            <a href="{% url 'base:admin_interface' %}">
+              <i class='bx bx-user' ></i>
+              <span class="links_name">Administrateur</span>
+            </a>
+            <span class="tooltip">Administrateur</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-chat'></i>
+              <span class="links_name">Messages</span>
+            </a>
+            <span class="tooltip">Messages</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-pie-chart-alt-2'></i>
+              <span class="links_name">Analytics</span>
+            </a>
+            <span class="tooltip">Analytics</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-folder'></i>
+              <span class="links_name">File Manager</span>
+            </a>
+            <span class="tooltip">Files</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cart-alt'></i>
+              <span class="links_name">Order</span>
+            </a>
+            <span class="tooltip">Order</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-heart'></i>
+              <span class="links_name">Saved</span>
+            </a>
+            <span class="tooltip">Saved</span>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-cog'></i>
+              <span class="links_name">Setting</span>
+            </a>
+            <span class="tooltip">Setting</span>
+          </li>
+          <li>
+            <a href="{% url 'base:home' %}">
+              <i class='bx bx-log-out' id="log_out"></i>
+              <span class="links_name">Home</span>
+            </a>
+            <span class="tooltip">Home</span>
+          </li>
+        </ul>
+      </div>
+  <section class="home-section">
+    <div class="text">
     
-  </section>
-  <footer>© 2024 TUNISIE TELECOM </footer>
-  <script>
-  let sidebar = document.querySelector(".sidebar");
-  let closeBtn = document.querySelector("#btn");
-  let searchBtn = document.querySelector(".bx-search");
-
-  closeBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("open");
-    menuBtnChange();//calling the function(optional)
-  });
-
-  searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
-    sidebar.classList.toggle("open");
-    menuBtnChange(); //calling the function(optional)
-  });
-
-  // following are the code to change sidebar button(optional)
-  function menuBtnChange() {
-   if(sidebar.classList.contains("open")){
-     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
-   }else {
-     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
-   }
-  }
-  // Function to handle the "Ajouter" button click
-function handleAddButtonClick() {
-// Redirect to the page where you can add new data
-window.location.href = "/add_site";
-}
-
-// Function to handle the "Modifier" button click
-function handleModifyButtonClick(codeSite) {
-// Redirect to the page where you can modify data
-window.location.href = "/modify_site" + codeSite;
-}
-
-// Function to handle the "Supprimer" button click
-function handleDeleteButtonClick(codeSite) {
-    // Afficher une boîte de dialogue de confirmation
-    if (confirm("Êtes-vous sûr de vouloir supprimer ce site?")) {
-        // Si l'utilisateur clique sur "OK" dans la boîte de dialogue
-        // Rediriger vers l'URL de suppression avec le code du site
-        window.location.href = "/delete_site?code=" + codeSite;
-    } else {
-        // Si l'utilisateur clique sur "Annuler" dans la boîte de dialogue
-        // Ne rien faire
-        return false;
-    }
-}
-
-  </script>
-</body>
-</html>
+      <h2>Responsable Juridique</h2>
+         <ul>
+          <li><a href="{% url 'base:informations' %}">Informations Générales</a></li>
+          <li><a href="{% url 'base:Colocation' %}">Colocation</a></li>
+          
+          <li><a href="{% url 'base:Equipment_actifs' %}">Equipment actifs</a></li>
+  </ul>
+          </div> 
+        </section>
+      </div>
+      
+      <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#btn");
+      let searchBtn = document.querySelector(".bx-search");
+    
+      closeBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("open");
+        menuBtnChange();//calling the function(optional)
+      });
+    
+      searchBtn.addEventListener("click", ()=>{ // Sidebar open when you click on the search iocn
+        sidebar.classList.toggle("open");
+        menuBtnChange(); //calling the function(optional)
+      });
+    
+      // following are the code to change sidebar button(optional)
+      function menuBtnChange() {
+       if(sidebar.classList.contains("open")){
+         closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");//replacing the iocns class
+       }else {
+         closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
+       }
+      }
+         
+      </script>
+    </body>
+    </html>

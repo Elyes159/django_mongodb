@@ -3,7 +3,7 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>Colocation </title>
+  <title>consultant</title>
   <link rel="stylesheet" href="style.css">
   <style>
     /* Ajoutez vos styles CSS ici */
@@ -333,7 +333,7 @@
 </head>
 <body>
   <header>
-    <h1></h1>
+    <h1>consultant</h1>
   </header>
   <div class="container">
     <div class="sidebar">
@@ -349,11 +349,11 @@
           <span class="tooltip">Search</span>
         </li>
         <li>
-          <a href="{% url 'base:responsable_juridique' %}">
-            <i class='bx bx-user' ></i>
-            <span class="links_name">Responsable Juridique</span>
+          <a href="{% url 'base:res_maintenace' %}">
+            <i class='bx bx-user'></i>
+            <span class="links_name">Responsable de Maintenance</span>
           </a>
-          <span class="tooltip">Responsable Juridique</span>
+          <span class="tooltip">Responsable de Maintenance</span>
         </li>
         <li>
           <a href="#">
@@ -398,55 +398,19 @@
           <span class="tooltip">Setting</span>
         </li>
         <li>
-          <a href="{% url 'base:home' %}">
+            <a href="{% url 'base:res_maintenace' %}">
             <i class='bx bx-log-out' id="log_out"></i>
-            <span class="links_name">Home</span>
+            <span class="links_name">Responsable de Maintenance</span>
           </a>
-          <span class="tooltip">Home</span>
+          <span class="tooltip">Responsable de Maintenance</span>
         </li>
       </ul>
     </div>
-
     <section class="home-section">
       <div class="">
-        <header>
-            <h1>Propriété & Location	</h1>
-        </header>
-        <main>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Code Site</th>
-                        <th>Nom Site</th>
-                        <th>Direction Régionale</th>
-                        <th>Nom du Propriétaire</th>
-                        <th>Type de contrat</th>
-                        <th>Date de signature</th>
-                        <th>Date début contrat</th>
-                        <th>Date fin contrat</th>
-                        <th>Durée du contrat</th>
-                        <th>Mode de renouvellement du contrat</th>
-                        <th>Durée de renouvellement</th>
-                        <th>Superficie louée (m²)</th>
-                        <th>Présence de clause contractuelle autorisant le partage</th>
-                        <th>Loyer annuel</th>
-                        <th>% Contractuel d'augmentation du loyer</th>
-                        <th>Périodicité d'augmentation du loyer</th>
-                        <th>Loyer actuel</th>
-                        <th>Dernière date de révision du loyer</th>
-                        <th>Modalité de paiement du loyer</th>
-                        <th>Situation contractuelle</th>
-                    </tr>
-                </thead>
-               <td>
-        <button onclick="handleModifyButtonClick()">Modifier</button>
-        <button onclick="handleDeleteButtonClick()">Supprimer</button>
-    </td>
-    </tr>
-    </tbody>
-    </table>
-    <button id="addButton" onclick="handleAddButtonClick()">Ajouter</button>
-    </main>
+        
+
+</main>
 
       </div>
       <footer>© 2024 TUNISIE TELECOM</footer>
@@ -476,103 +440,6 @@
      closeBtn.classList.replace("bx-menu-alt-right","bx-menu");//replacing the iocns class
    }
   }
-      // Function to handle the "Ajouter" button click
-      function handleAddButtonClick() {
-        // Redirect to the page where you can add new data
-        window.location.href = "/add_jui";
-    }
-    
-    // Function to handle the "Modifier" button click
-    function handleModifyButtonClick() {
-        // Redirect to the page where you can modify data
-        // Replace "codeSite" with the actual ID of the site to be modified
-        var codeSite = "codeSite"; // Replace this with the actual ID of the site
-        window.location.href = "/modify_jui/" + codeSite;
-    }
-    
-    // Function to handle the "Supprimer" button click
-    function handleDeleteButtonClick() {
-        // Send an AJAX request or redirect to the backend to delete the data
-        if (confirm("Êtes-vous sûr de vouloir supprimer ce site?")) {
-            // Here you can make an AJAX request or redirect to the backend URL to delete the data
-            window.location.href = "/delete_jui";
-        }
-    }
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
